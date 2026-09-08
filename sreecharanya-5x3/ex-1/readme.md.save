@@ -1,0 +1,9 @@
+# 1(a) 1.CREATE TABLE OF THE ABOVE DATABASE WITH OUT CONSTRAINTS
+
+```
+CREATE TABLE student(
+name VARCHAR2(20),
+student_number NUMBER,
+class NUMBER,
+Major VARCHAR2(20));
+      
