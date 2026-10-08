@@ -34,7 +34,7 @@ CREATE TABLE grand_report
 );
 ```
 
-![OUTPUT](OP-1)
+![OUTPUT](OP-1.png)
 
 #1(a) 2.INSERT All Values inside the table.
 ```
@@ -61,7 +61,7 @@ INSERT INTO Grade_report VALUES(8,92,'A');
 INSERT INTO Grade_report VALUES(8,102,'B');
 INSERT INTO Grade_report VALUES(8,135,'A');
 ```
-![OUTPUT](OP-2)
+![OUTPUT](OP-2.png)
 
 #1(a) 3.DESCRIBE All Tables.
 ```
@@ -70,13 +70,13 @@ DESC Course;
 DESC Section;
 DESC Grade_report;
 ```
-![OUTPUT](OP-3)
+![OUTPUT](OP-3.png)
 
 #1(a) 4.List the created tables.
 ```
 SELECT * FROM tab;
 ```
-![OUTPUT](OP-4)
+![OUTPUT](OP-4.png)
 
 #1(a) 5.Display the Values of each table.
 ```
@@ -85,10 +85,10 @@ SELECT * FROM Courses;
 SELECT * FROM Section;
 SELECT * FROM Grade_report;
 ```
-![OUTPUT](OP-5a)
-![OUTPUT](OP-5b)
-![OUTPUT](OP-5c)
-![OUTPUT](OP-5d)
+![OUTPUT](OP-5a.png)
+![OUTPUT](OP-5b.png)
+![OUTPUT](OP-5c.png)
+![OUTPUT](OP-5d.png)
 
 #1(a) 6.Delete All Tables.
 ```
@@ -97,7 +97,7 @@ DROP TABLE Course;
 DROP TABLE Section;
 DROP TABLE Grade_report;
 ```
-![OUTPUT](OP-6)
+![OUTPUT](OP-6.png)
 
 #1(b) 1.Implimentation of the tables using constraints.
 ```
@@ -127,7 +127,7 @@ Grade VARCHAR2(2),
 PRIMARY KEY (Student_no,Section_id));
 
 ```
-![OUTPUT](OT-1)
+![OUTPUT](OT-1.png)
 
 #1(b) 2.Display the description of each table.
 ```
@@ -136,7 +136,7 @@ DESC Course;
 DESC Section;
 DESC Grade_report;
 ```
-![OUTPUT](OT-2)
+![OUTPUT](OT-2.png)
 
 #1(b) 3.Insert Values in each table.
 ```
@@ -162,7 +162,7 @@ INSERT INTO Grade_report VALUES(8,92,'A');
 INSERT INTO Grade_report VALUES(8,102,'B');
 INSERT INTO Grade_report VALUES(8,135,'A');
 ```
-![OUTPUT](OT-3)
+![OUTPUT](OT-3.png)
 
 #1(b) 4.Display the inserted values of each table.
 ```
@@ -171,38 +171,38 @@ DESC Course;
 DESC Section;
 DESC Grade_report;
 ```
-![OUTPUT](OT-4a)
-![OUTPUT](OT-4b)
-![OUTPUT](OT-4c)
-![OUTPUT](OT-4d)
+![OUTPUT](OT-4a.png)
+![OUTPUT](OT-4b.png)
+![OUTPUT](OT-4c.png)
+![OUTPUT](OT-4d.png)
 
 #1(b) 5.Add branch attribute in student and describe.
 ```
 ALTER TABLE Student ADD BRANCH VARCHAR2(10);
 DESC Student;
 ```
-![OUTPUT](OT-5)
+![OUTPUT](OT-5.png)
 
 #1(b) 6Copy major values into branch.
 ```
 UPDATE Student SET BRANCH=Major;
 SELECT * FROM Student;
 ```
-![OUTPUT](OT-6)
+![OUTPUT](OT-6.png)
 
 #1(b) 7.Remove Major attribute.
 ```
 ALTER TABLE Student
 DROP COLUMN Major;
 ```
-![OUTPUT](OT-7)
+![OUTPUT](OT-7.png)
 
 #1(b) 8.Change course number to CID and Describe,
 ```
 ALTER TABLE Course RENAME COLUMN Course_no TO CID;
 DESC Course;
 ```
-![OUTPUT](OT-8)
+![OUTPUT](OT-8.png)
 
 #1(b) 9.Change credit_hours of database course to 4.
 ```
@@ -211,41 +211,41 @@ SET Credit_hours=4
 WHERE Course_name='Database';
 SELECT  * FROM Course; 
 ```
-![OUTPUT](OT-9)
+![OUTPUT](OT-9.png)
 
 #1(b) 10.Put NOT NULL Constraints on BRANCH.
 ```
 ALTER TABLE Student 
 MODIFY BRANCH VARCHAR2(10) NOT NULL;
 ```
-![OUTPUT](OT-10)
+![OUTPUT](OT-10.png)
 
 #1(b) 11.Rename student table to pupil.
 ```
 ALTER TABLE Student RENAME TO Pupil;
 ```
-![OUTPUT](OT-11)
+![OUTPUT](OT-11.png)
 
 #1(b) 12.Remove the student table.
 ```
 
 DROP TABLE pupil;
 ```
-![OUTPUT](OT-12)
+![OUTPUT](OT-12.png)
 
 #1(b) 13.Remove rows of 'Fall' semester.
 ```
 DELETE FROM Section WHERE Semester='Fall';
 SELECT * FROM Section;
 ```
-![OUTPUT](OT-13)
+![OUTPUT](OT-13.png)
 
 #1(b) 14.Remove 'Data Structures' Row.
 ```
 DELETE FROM Course WHERE Course_name='Data Structures';
 SELECT * FROM Course;
 ```
-![OUTPUT](OT-14)
+![OUTPUT](OT-14.png)
 
 #1(b) 15.Remove all rows using TRUNCATE.
 ```
@@ -254,7 +254,7 @@ TRUNCATE TABLE Course;
 TRUNCATE TABLE Section;
 TRUNCATE TABLE Grade_report;
 ```
-![OUTPUT](OT-15)
+![OUTPUT](OT-15.png)
 
 #1(b) 16.Remove pupil,course and section.
 ```
@@ -263,7 +263,7 @@ DROP TABLE COURSE;
 DROP TABLE SECTION;
 DROP TABLE GRADE_REPORT;
 ```
-![OUTPUT](OT-16)
+![OUTPUT](OT-16.png)
 
 #1(b) 17.Remove grade_report and PREREQUISITE permanently.
 ```
